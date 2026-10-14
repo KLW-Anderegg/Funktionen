@@ -1,1 +1,749 @@
 \section{Was ist eine Funktion?}
+
+\begin{LA}{Einführungsaufgabe}{}
+    Für diese Aufgabe betrachten wir verschiedene \enquote{Zuordnungsmaschinen}.
+    Das sind Maschinen, die jeden sinnvollen Input nach einer bestimmten
+    Regel in einen Output verwandeln.
+
+    \begin{center}
+        \includegraphics[width = 0.25\textwidth]{media/Funktionmaschine_mit_Input_und_Output.png}
+    \end{center}
+
+    \begin{enumerate}
+        \item Die erste Maschine soll Folgendes machen:
+              Wenn man eine \(2\) durch die Maschine lässt, kommt \(0.5\)
+              heraus. Das schreiben wir so: \(2 \mapsto 0.5\).
+              Wenn man die Zahl \(-5\) in die Maschine gibt, wird die Zahl
+              \(-0.2\) ausgegeben, also \(-5 \mapsto -0.2\).
+
+              Weitere Zuordnungen sind:
+              \(1 \mapsto 1\), \(8 \mapsto 0.125\), \(-10 \mapsto -0.1\).
+
+              \begin{itemize}
+                  \item Erraten Sie die Regel, nach welcher der Output
+                        aus dem Input berechnet wird.
+                        Was würde man erhalten, wenn man \(3\) durch
+                        die Maschine lässt?
+                        Wie lautet der Output, wenn der Input \(x\) ist?
+
+                  \item Welchen Input kann die Maschine nicht verarbeiten?
+              \end{itemize}
+
+        \item Für eine neue Maschine gilt:
+              \[
+                  \begin{array}{ccccccc}
+                      -3 \mapsto 9, &
+                      -2 \mapsto 4, &
+                      -1 \mapsto 1, &
+                      0 \mapsto 0,  &
+                      1 \mapsto 1,  &
+                      2 \mapsto 4,  &
+                      3 \mapsto 9
+                  \end{array}
+              \]
+
+              Erraten Sie die Regel, nach welcher der Output aus dem
+              Input berechnet wird.
+              Was würde man erhalten, wenn man \(5\) durch die Maschine
+              lässt?
+              Wie lautet der Output, wenn der Input \(x\) ist?
+
+        \item Für eine dritte Maschine gilt:
+              \[
+                  \begin{array}{ccccccc}
+                      -3 \mapsto -5, &
+                      -2 \mapsto -3, &
+                      -1 \mapsto -1, &
+                      0 \mapsto 1,   &
+                      1 \mapsto 3,   &
+                      2 \mapsto 5,   &
+                      3 \mapsto 7
+                  \end{array}
+              \]
+
+              Erraten Sie die Regel, nach welcher der Output aus dem
+              Input berechnet wird.
+              Was würde man erhalten, wenn man \(5\) durch die Maschine
+              lässt?
+              Wie lautet der Output, wenn der Input \(x\) ist?
+
+        \item \textbf{Challenge:}
+              \[
+                  \begin{array}{ccccccc}
+                      1 \mapsto 1, &
+                      2 \mapsto 2, &
+                      3 \mapsto 2, &
+                      4 \mapsto 3, &
+                      5 \mapsto 2, &
+                      6 \mapsto 4, &
+                      7 \mapsto 2
+                  \end{array}
+              \]
+
+              Erraten Sie die Regel, nach welcher der Output aus dem
+              Input berechnet wird.
+              Was würde man erhalten, wenn man \(100\) durch die
+              Maschine lässt?
+
+              \emph{Tipp: Betrachten Sie die Teiler der Input-Zahl.}
+
+        \item Denken Sie sich selbst eine Zuordnungsmaschine aus.
+              Dabei gelten folgende Regeln:
+
+              \begin{itemize}
+                  \item Die Maschine muss für jeden zulässigen Input
+                        genau einen Output generieren.
+                  \item Die Maschine muss den Output nach der immer
+                        gleichen Regel eindeutig bestimmen.
+              \end{itemize}
+
+              Ihre Banknachbarin oder Ihr Banknachbar soll nun die Regel
+              erraten, nach der die Maschine den Output generiert.
+              Dazu darf die Person einige Zahlen durch Ihre Maschine
+              lassen und Sie geben an, was der entsprechende Output ist.
+
+              Tauschen Sie anschliessend die Rollen.
+    \end{enumerate}
+\end{LA}
+
+\clearpage
+Der Begriff der Funktion ist das vermutlich wichtigste Konzept im gymnasialen Unterricht. Was versteht
+man darunter?
+
+\begin{definition}
+    {Funktion}{}
+    Eine \emph{Funktion} (häufig mit \(f\) bezeichnet) ist eine
+    eindeutige Zuordnung, die jedem Element \(x\) einer bestimmten
+    Menge \(\mathbb{D}\) (\emph{Definitionsbereich} oder
+    \emph{Definitionsmenge} genannt) genau ein Element \(y\) oder
+    \(f(x)\) (sprich \enquote{f von x}) einer zweiten Menge
+    \(\mathbb{W}\) (\emph{Wertemenge} genannt) zuordnet.
+\end{definition}
+
+\subsection*{Funktion als Maschine}
+
+Funktionen kann man sich als eine Art Input-Output-Maschine vorstellen.
+Man gibt eine Zahl \(x\) in die Maschine, die Zahl wird verarbeitet
+und schliesslich wird eine Zahl \(f(x)\) herausgegeben.
+
+
+\begin{center}
+    \includegraphics[width = 0.5\textwidth]{media/Funktionmaschine_mit_Input_und_Output.png}
+\end{center}
+
+
+Der Definitionsbereich ist dann die Menge aller Eingaben, die von
+der Maschine verarbeitet werden können. Die Wertemenge ist hingegen
+die Menge aller möglichen Outputs.
+
+Am einfachsten versteht man dieses Bild mit einem Beispiel:
+Die Quadratfunktion \(f(x)=x^2\) entspricht der Maschine, die eine
+beliebige Zahl als Input nimmt und das Quadrat des Inputs herausgibt.
+Wenn man \(x=5\) eingibt, wird \(y=25\) herausgegeben.
+
+In diesem Beispiel wäre der Definitionsbereich
+\(\mathbb{D}=\mathbb{R}\), weil jede reelle Zahl quadriert werden kann.
+Da beim Quadrieren aber keine negativen Zahlen entstehen können,
+ist die Wertemenge \enquote{nur}
+\(\mathbb{W}=\mathbb{R}_0^+\).
+
+Ganz wichtig in der Definition ist die Formulierung
+\enquote{genau ein}. Eine Maschine, welche eine Zahl in eine andere
+verwandelt, ist nicht immer eine Funktion. Entscheidend ist,
+dass für jeden Input \emph{genau ein} Output infrage kommt --
+nicht mehr und nicht weniger.
+
+Aus diesem Grund ist die Zuordnung, die jeder natürlichen Zahl
+\(x\) eine natürliche Zahl \(y\) zuordnet, die \(x\) Teiler besitzt,
+keine Funktion, weil es zum Input \(x=2\) unendlich viele mögliche
+Outputs gibt -- alle Primzahlen.
+
+\subsection*{Funktion als Wolkendiagramm}
+
+Ein anderes Bild, das man sich von einer Funktion machen kann,
+ist das folgende:
+
+\begin{center}
+    \begin{tikzpicture}[>=stealth, scale=1]
+
+        % Definitionsmenge
+        \draw[fill=gray!15] (0,0) ellipse (1.5cm and 1.5cm);
+
+        % Wertemenge
+        \draw[fill=gray!15] (5,0) ellipse (1cm and 1.9cm);
+
+        % Elemente
+        \fill (0.3,-0.4) circle (2.5pt);
+        \fill (5.1,0.3) circle (2.5pt);
+
+        % Beschriftungen der Elemente
+        \node[below] at (0.3,-0.4) {\(x\)};
+        \node[below] at (5.1,0.3) {\(y=f(x)\)};
+
+        % Zuordnungspfeil
+        \draw[->, thick]
+        (0.5,-0.35) .. controls (2,0.4) and (3.5,0.5) ..
+        (4.9,0.3);
+
+        % Beschriftung des Pfeils
+        \node[below] at (2.7,0.2) {Funktion \(f\)};
+
+        % Beschriftungen der Mengen
+        \node[below] at (0,-1.55)
+        {Definitionsbereich \(\mathbb{D}\)};
+
+        \node[below] at (5,-1.95)
+        {Wertemenge \(\mathbb{W}\)};
+
+    \end{tikzpicture}
+\end{center}
+
+Hier werden die beiden Mengen grafisch als Ovale stilisiert.
+Die Elemente der einzelnen Mengen werden als Punkte in den
+Ovalen dargestellt. Die Funktion ordnet jedem Punkt der Menge
+links einen Punkt der Menge rechts zu, was mit einem Pfeil
+dargestellt wird.
+
+Die Eindeutigkeit ist dann gegeben, wenn von jedem Punkt des Definitionsbereiches genau einen Pfeil
+abgeht. Umgekehrt dürfen aber mehrere Pfeile das gleiche Ziel haben:
+\begin{center}
+    \begin{tikzpicture}[
+            >=stealth,
+            thick,
+            punkt/.style={circle, fill=black, inner sep=1.5pt},
+            pfeil/.style={->, thin},
+            beschriftung/.style={font=\small}
+        ]
+
+        % Gemeinsame Einstellungen
+        \def\abstand{5.8}
+        \def\ovalbreite{0.85}
+        \def\ovalhoehe{1.55}
+
+        % ==========================================
+        % 1. Beispiel: Eine Funktion
+        % ==========================================
+        \begin{scope}[shift={(0,0)}]
+
+            \draw (0,0) ellipse [
+                    x radius=\ovalbreite cm,
+                    y radius=\ovalhoehe cm
+                ];
+            \draw (3,0) ellipse [
+                    x radius=\ovalbreite cm,
+                    y radius=\ovalhoehe cm
+                ];
+
+            \node[beschriftung, above] at (0,1.6) {Definitionsmenge};
+            \node[beschriftung, above] at (3,1.6) {Wertemenge};
+
+            % Punkte Definitionsmenge
+            \foreach \y in {1,0.4,-0.6,-1.1}
+            \node[punkt] at (0,\y) {};
+
+            % Punkte Wertemenge
+            \foreach \y in {1.1,0.4,-0.3,-1.1}
+            \node[punkt] at (3,\y) {};
+
+            % Zuordnungen
+            \draw[pfeil] (0,1) -- (3,1.1);
+            \draw[pfeil] (0,0.4) -- (3,-0.3);
+            \draw[pfeil] (0,-0.6) -- (3,0.4);
+            \draw[pfeil] (0,-1.1) -- (3,-1.1);
+
+            \node at (1.5,-2) {eine Funktion};
+
+        \end{scope}
+
+        % ==========================================
+        % 2. Beispiel: Auch eine Funktion
+        % ==========================================
+        \begin{scope}[shift={(\abstand,0)}]
+
+            \draw (0,0) ellipse [
+                    x radius=\ovalbreite cm,
+                    y radius=\ovalhoehe cm
+                ];
+            \draw (3,0) ellipse [
+                    x radius=\ovalbreite cm,
+                    y radius=\ovalhoehe cm
+                ];
+
+            \node[beschriftung, above] at (0,1.6) {Definitionsmenge};
+            \node[beschriftung, above] at (3,1.6) {Wertemenge};
+
+            % Punkte Definitionsmenge
+            \foreach \y in {1,0.4,-0.6,-1.1}
+            \node[punkt] at (0,\y) {};
+
+            % Ein Punkt in der Wertemenge
+            \node[punkt] at (3,0) {};
+
+            % Alle Elemente werden demselben Wert zugeordnet
+            \foreach \y in {1,0.4,-0.6,-1.1}
+            \draw[pfeil] (0,\y) -- (3,0);
+
+            \node at (1.5,-2) {auch eine Funktion};
+
+        \end{scope}
+
+        % ==========================================
+        % 3. Beispiel: Keine Funktion
+        % ==========================================
+        \begin{scope}[shift={(2*\abstand,0)}]
+
+            \draw (0,0) ellipse [
+                    x radius=\ovalbreite cm,
+                    y radius=\ovalhoehe cm
+                ];
+            \draw (3,0) ellipse [
+                    x radius=\ovalbreite cm,
+                    y radius=\ovalhoehe cm
+                ];
+
+            \node[beschriftung, above] at (0,1.6) {Definitionsmenge};
+            \node[beschriftung, above] at (3,1.6) {Wertemenge};
+
+            % Punkte Definitionsmenge
+            \foreach \y in {1,0,-1.1}
+            \node[punkt] at (0,\y) {};
+
+            % Punkte Wertemenge
+            \foreach \y in {1,0.4,0,-1.1}
+            \node[punkt] at (3,\y) {};
+
+            % Zuordnungen
+            \draw[pfeil] (0,1) -- (3,1);
+            \draw[pfeil] (0,0) -- (3,0.4);
+            \draw[pfeil] (0,0) -- (3,0);
+            \draw[pfeil] (0,-1.1) -- (3,-1.1);
+
+            \node at (1.5,-2) {keine Funktion};
+
+        \end{scope}
+
+    \end{tikzpicture}
+\end{center}
+
+\subsection*{Sprech- und Schreibweisen}
+
+Der Begriff der Funktion ist über einen langen Zeitraum von etwa
+150 Jahren entstanden. In dieser Zeit haben sich Mathematiker in
+verschiedenen Teilgebieten der Mathematik zwar intensiv mit Funktionen
+befasst, aber es gab noch keinen Überbegriff dafür. So sind
+unterschiedliche Sprechweisen entstanden, die das Gleiche bedeuten
+und noch heute parallel verwendet werden:
+
+\begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|p{0.3\textwidth}|p{0.3\textwidth}|p{0.3\textwidth}|}
+        \hline
+        \emph{Input} & \centering\(\longmapsto\)\arraybackslash
+                     & \emph{Output}                                            \\ \hline
+        Argument     & Abbilden                                 & Funktionswert \\
+        Stelle       & Auswerten                                & Wert          \\
+        Urbild       &                                          & Bild          \\
+        \(x\)        &                                          & \(y\)         \\
+                     &                                          & \(f(x)\)      \\ \hline
+    \end{tabular}
+\end{center}
+
+Über die Funktion \(f\), die jeder Zahl ihr Quadrat zuordnet,
+könnte man also sagen:
+
+\begin{itemize}
+    \item \enquote{Der Wert der Funktion \(f\) zum Argument \(3\) ist \(9\)}
+    \item \enquote{\(x=-3\) wird auf \(y=9\) abgebildet}
+    \item \enquote{Der Funktionswert \(9\) hat zwei Urbilder: \(3\) und \(-3\)}
+    \item \enquote{Wird die Funktion an der Stelle \(3\) ausgewertet, erhält man \(9\)}
+    \item \enquote{\(f(3)=9\)} (Sprich f von 3 gleich 9)
+    \item \enquote{Das Bild von \(-3\) unter der Funktion \(f\) ist \(9\)}
+\end{itemize}
+
+Auch bei den Schreibweisen gibt es viele Varianten.
+Die ausführlichste Variante schreibt sich so:
+\[
+    f\colon \mathbb{R}\longrightarrow\mathbb{R}_0^+;
+    \quad x\longmapsto y=x^2
+\]
+
+Bei dieser Variante werden auch die beiden involvierten Mengen
+angegeben. Damit klar ist, welches die Mengen und welches die
+Elemente sind\footnote{Das ist nicht immer so klar: Es gibt Funktionen, die Mengen als Input und als Output haben\dots}, die abgebildet werden, verwendet man zwei
+unterschiedliche Pfeile.
+
+Häufig interessiert man sich nicht so sehr für die beteiligten
+Mengen. Dann schreibt man einfach
+\[
+    f\colon x\longmapsto y=x^2
+    \quad\text{oder}\quad
+    f\colon x\longmapsto x^2
+    \quad\text{oder}\quad
+    f\colon x\longmapsto f(x)=x^2
+\]
+
+Ausserdem hat man sich darauf geeinigt, dass die Argumente in
+der Regel mit \(x\) und die Werte mit \(y\) oder \(f(x)\)
+bezeichnet werden. Dann genügt die folgende Schreibweise:
+\[
+    y=x^2
+    \quad\text{oder}\quad
+    f(x)=x^2
+\]
+
+\subsection*{Funktionsgleichung}
+
+Im Beispiel der Quadratfunktion kann man eine Rechenanweisung
+angeben, mit der man ausgehend vom Input den Output berechnen kann:
+\[
+    f(x)=x^2
+\]
+Das nennt man eine \emph{Funktionsgleichung}. Will man den Funktionswert
+an einer Stelle bestimmen, kann man das \(x\) in der
+Funktionsgleichung durch das gewünschte Argument ersetzen.
+Zum Beispiel: Was ist der Funktionswert an der Stelle \(x=3\)?
+\[
+    f(3)=3^2=9
+\]
+
+Manchmal gibt es bei der Funktionsgleichung auch unterschiedliche
+Rechenanweisungen, je nachdem, in welchem Bereich der Input liegt.
+Das ist zum Beispiel bei der sogenannten \emph{Betragsfunktion}
+der Fall. Anstatt mit \(f(x)\) wird sie in der Regel mit
+\(|x|\) oder mit \(\operatorname{abs}(x)\)\footnote{Die Funktion wird manchmal auch Absolutbetrag genannt, daher der Name \(\operatorname{abs}(x)\)} bezeichnet und ist
+folgendermassen definiert:
+\[
+    |x|=
+    \begin{cases}
+        x,  & \text{falls } x\geq 0, \\
+        -x, & \text{falls } x<0.
+    \end{cases}
+\]
+
+Die Zahl \(x=4\) würde abgebildet auf \(|4|=4\).
+An der Stelle \(x=-5\) gilt hingegen: \(|-5|=5\).
+
+Es gibt aber auch viele Funktionen, für die man keine einfache
+Funktionsgleichung angeben kann. Zum Beispiel die Funktion
+\(\tau\) (sprich \enquote{Tau}), die jeder natürlichen Zahl
+\(n\) die Anzahl ihrer Teiler zuordnet. Für sie gilt
+\(\tau(10)=4\), weil \(10\) die vier Teiler \(1\), \(2\), \(5\)
+und \(10\) besitzt. Oder können Sie etwa eine Funktionsgleichung
+für \(\tau\) angeben?
+
+\subsection*{Ein mentales Werkzeug}
+
+In den nächsten Schuljahren werden Sie erleben, dass ganz viele
+Prozesse als Funktionen betrachtet werden können, und diese
+Betrachtungsweise enorm fruchtbar sein kann. Das macht dieses
+Konzept zu einem mächtigen mentalen Werkzeug! Untersucht man
+einen Sachverhalt mit der \enquote{Funktionenbrille}, kann man
+ihn plötzlich mit vielen anderen Sachverhalten vergleichen, die
+auf den ersten Blick nicht viel gemeinsam haben.
+
+Dazu ein Beispiel: Newtons Beiträge in der Physik sind von
+unschätzbarem Wert. Ganz entscheidend bei deren Entwicklung
+war, dass Newton Bewegung als eine Funktion aufgefasst hat:
+Jedem Zeitpunkt wird die Position des bewegten Objektes
+zugeordnet. Mehr dazu später\ldots
+
+Zum Schluss noch dies: Funktionen müssen nicht unbedingt
+Zahlen auf Zahlen abbilden:
+
+\begin{itemize}
+    \item Ordnet man jeder Person ihre Blutgruppe zu, ist das
+          auch eine Funktion mit Wertemenge
+          \[
+              \mathbb{W}=\{A,B,AB,0\}.
+          \]
+
+    \item Eine Achsenspiegelung ist eine Funktion, die jeden
+          Punkt einer Ebene auf einen anderen Punkt der Ebene
+          abbildet.
+
+    \item Die Wahrscheinlichkeit ist eine Funktion, die jedem
+          Ereignis eine Zahl zwischen \(0\) und \(1\) zuordnet.
+
+    \item Und viele mehr\ldots
+\end{itemize}
+
+
+\begin{ueb}
+    {}{}
+    \begin{enumerate}
+        \item Gegeben ist die Funktion \(f(x)=\dfrac{6}{x-1}\).
+
+              \begin{enumerate}
+                  \item Berechnen Sie \(f(0)\).
+                  \item Berechnen Sie den Funktionswert an der Stelle \(3\).
+                  \item Geben Sie das Urbild von \(12\) an.
+                  \item Geben Sie den grösstmöglichen Definitionsbereich und die entsprechende Wertemenge an.
+                  \item Welche Argumente werden auf sich selbst abgebildet?
+                        (Tipp: Produkt \(=0\))
+              \end{enumerate}
+
+        \item Die Vorzeichenfunktion \(\operatorname{sgn}(x)\)\footnote{Vorzeichen auf Latein: Signum. Daher der Name \(\operatorname{sgn}.\)} ist wie folgt definiert:
+              \[
+                  \operatorname{sgn}(x)=
+                  \begin{cases}
+                      1,  & \text{falls } x>0, \\
+                      0,  & \text{falls } x=0, \\
+                      -1, & \text{falls } x<0.
+                  \end{cases}
+              \]
+
+              \begin{enumerate}
+                  \item Bestimmen Sie \(\operatorname{sgn}(\pi)\) und
+                        \(\operatorname{sgn}(-100)\).
+                  \item Geben Sie den Definitionsbereich und die Wertemenge
+                        der Vorzeichenfunktion an.
+                  \item Sei \(a\) eine beliebige reelle Zahl.
+                        Was ist dann \(|a|\cdot\operatorname{sgn}(a)\),
+                        \begin{enumerate}
+                            \item falls \(a>0\) ist?
+                            \item falls \(a=0\) ist?
+                            \item falls \(a<0\) ist?
+                        \end{enumerate}
+              \end{enumerate}
+
+        \item Sei \(p\colon x\mapsto 2x+1\).
+
+              \begin{enumerate}
+                  \item Berechnen Sie \(p(3)\).
+                  \item Berechnen Sie \(p(p(3))\). Wobei das so zu verstehen ist,
+                        dass der Output \(p(3)\) von \(3\) nochmals als Input
+                        der Funktion \(p\) dient.
+                  \item Was ist dann \(p(p(p(3)))\)?
+                  \item Und allgemein \(p(p(p(a)))\)?
+                  \item Welches Argument wird (durch die ursprüngliche
+                        Funktion \(p\)) auf sich selbst abgebildet?
+              \end{enumerate}
+
+        \item Betrachten Sie die Wurzelfunktion \(y=\sqrt{x}\).
+              Der Output dieser Funktion ist die nicht-negative Zahl \(y\)
+              mit \(y^2=x\). Zum Beispiel \(\sqrt{9}=3\).
+
+              \begin{enumerate}
+                  \item Was ist \(\sqrt{36}\)? Und was \(\sqrt{0}\)?
+                  \item Wieso muss betont werden, dass \(y\) nicht-negativ ist?
+                  \item Geben Sie Definitionsbereich und Wertemenge
+                        der Wurzelfunktion an.
+                  \item Definitionsbereich heisst auf Englisch \enquote{domain}.
+                        Tippen Sie \(\sqrt{-9}\) in den Taschenrechner.
+                        Welche Meldung erscheint? Wieso?
+                  \item Gibt es Argumente, die kleiner sind als deren
+                        Funktionswerte? Welche?
+              \end{enumerate}
+
+
+        \item Welche Zuordnung stellt eine Funktion dar?
+
+              \begin{center}
+                  \begin{tikzpicture}[
+                          >=stealth,
+                          punkt/.style={circle, fill=black, inner sep=1.5pt},
+                          pfeil/.style={->, thin},
+                          beschriftung/.style={font=\small}
+                      ]
+
+                      \foreach \x/\name in {0/i), 3.5/ii), 7/iii), 10.5/iv)} {
+                              \begin{scope}[shift={(\x,0)}]
+                                  \draw (0,0) ellipse [x radius=0.45cm, y radius=0.9cm];
+                                  \draw (1.7,0) ellipse [x radius=0.45cm, y radius=0.9cm];
+                                  \node[beschriftung, above] at (0.85,1) {\name};
+                              \end{scope}
+                          }
+
+                      % i) Funktion
+                      \begin{scope}[shift={(0,0)}]
+                          \foreach \y in {0.3,-0.3}
+                          \node[punkt] at (0,\y) {};
+                          \foreach \y in {0.5,0,-0.3}
+                          \node[punkt] at (1.7,\y) {};
+
+                          \draw[pfeil] (0,0.3) -- (1.7,0.5);
+                          \draw[pfeil] (0,-0.3) -- (1.7,-0.3);
+                      \end{scope}
+
+                      % ii) Keine Funktion: Ein Element ohne Bild
+                      \begin{scope}[shift={(3.5,0)}]
+                          \foreach \y in {0.5,0,-0.3}
+                          \node[punkt] at (0,\y) {};
+                          \foreach \y in {0.3,-0.3}
+                          \node[punkt] at (1.7,\y) {};
+
+                          \draw[pfeil] (0,0.5) -- (1.7,0.3);
+                          \draw[pfeil] (0,-0.3) -- (1.7,-0.3);
+                      \end{scope}
+
+                      % iii) Keine Funktion: Mehrere Bilder
+                      \begin{scope}[shift={(7,0)}]
+                          \foreach \y in {0.5,0,-0.3}
+                          \node[punkt] at (0,\y) {};
+                          \foreach \y in {0.5,0,-0.3}
+                          \node[punkt] at (1.7,\y) {};
+
+                          \draw[pfeil] (0,0.5) -- (1.7,0.5);
+                          \draw[pfeil] (0,-0.3) -- (1.7,0.5);
+                          \draw[pfeil] (0,-0.3) -- (1.7,0);
+                          \draw[pfeil] (0,-0.3) -- (1.7,-0.3);
+                      \end{scope}
+
+                      % iv) Funktion: Zwei Elemente mit gleichem Bild
+                      \begin{scope}[shift={(10.5,0)}]
+                          \foreach \y in {0.5,0.15,-0.2,-0.55}
+                          \node[punkt] at (0,\y) {};
+                          \foreach \y in {0.5,0.15,-0.2}
+                          \node[punkt] at (1.7,\y) {};
+
+                          \draw[pfeil] (0,0.5) -- (1.7,0.5);
+                          \draw[pfeil] (0,0.15) -- (1.7,0.15);
+                          \draw[pfeil] (0,-0.2) -- (1.7,-0.2);
+                          \draw[pfeil] (0,-0.55) -- (1.7,-0.2);
+                      \end{scope}
+
+                  \end{tikzpicture}
+              \end{center}
+
+        \item Entscheiden Sie, ob die Zuordnung eindeutig und damit
+              eine Funktion ist.
+
+              \begin{enumerate}
+                  \item Person \(\mapsto\) Geburtsdatum
+                        s
+                  \item  Geburtsdatum \(\mapsto\) Person
+
+                  \item AHV-Nummer \(\mapsto\) Person
+
+                  \item Körpergrösse einer Person \(\mapsto\) Alter der Person
+
+                  \item Alter einer Person \(\mapsto\) Körpergrösse der Person
+
+              \end{enumerate}
+
+
+        \item Gegeben ist die Funktion \(g\) mit der Funktionsgleichung
+              \(g(x)=2x^2-x\).
+
+              Berechnen Sie die gesuchten Funktionswerte.
+
+              \begin{enumerate}
+                  \item \(g(-2)\)
+                  \item \(g(0)\)
+                  \item \(g\left(\frac{1}{2}\right)\)
+                  \item \(g\left(\frac{7}{6}\right)\)
+                  \item \(g(t)\)
+                  \item \(g(t^2)\)
+                  \item \(g(\sqrt{x})\)
+                  \item \(g(x+2)\)
+              \end{enumerate}
+
+
+
+        \item \textbf{Challenge}
+
+              Betrachten Sie die Mengen
+              \(A=\{1,2,3,4\}\) und \(B=\{1,2,3,4,5,6\}\).
+              Sei \(f\) eine Funktion, deren Definitionsbereich \(A\) ist
+              und deren Wertemenge eine Teilmenge von \(B\) ist.
+
+              \begin{enumerate}
+                  \item Wie viele solche Funktionen gibt es?
+                  \item Wie viele solche Funktionen gibt es, bei denen
+                        kein Element auf sich selbst abgebildet wird?
+              \end{enumerate}
+
+        \item \textbf{Challenge}
+
+              Wie bereits erwähnt, kann man für die Teileranzahl-Funktion
+              \(\tau\) nicht so leicht eine Funktionsgleichung angeben.
+              Allerdings kann man \(\tau(n)\) aus der Primfaktorzerlegung
+              von \(n\) bestimmen:
+
+              Sei
+              \[
+                  n=p_1^{a_1}\cdot p_2^{a_2}\cdot
+                  \ldots\cdot p_k^{a_k}
+              \]
+              die Primfaktorzerlegung von \(n\).
+
+              Berechnen Sie daraus \(\tau(n)\).
+    \end{enumerate}
+\end{ueb}
+
+\clearpage
+\textbf{Lösungen:}
+
+\begin{enumerate}
+    \item \(f(x)=\dfrac{6}{x-1}\)
+          \begin{enumerate}
+              \item \(f(0)=-6\)
+              \item \(f(3)=3\)
+              \item \(x=\dfrac{3}{2}\)
+              \item \(\mathbb{D}=\mathbb{R}\setminus\{1\};
+                    \quad \mathbb{W}=\mathbb{R}\setminus\{0\}\)
+              \item
+                    \[
+                        \frac{6}{x-1}=x
+                        \iff x^2-x-6=0
+                        \iff (x-3)(x+2)=0
+                        \iff x=3 \text{ oder } x=-2
+                    \]
+          \end{enumerate}
+
+    \item Vorzeichenfunktion
+          \begin{enumerate}
+              \item \(\operatorname{sgn}(\pi)=1\) und
+                    \(\operatorname{sgn}(-100)=-1\)
+              \item \(\mathbb{D}=\mathbb{R};
+                    \quad \mathbb{W}=\{-1,0,1\}\)
+              \item \(|a|\cdot\operatorname{sgn}(a)=a\)
+          \end{enumerate}
+
+    \item \(p\colon x\mapsto 2x+1\)
+          \begin{enumerate}
+              \item \(p(3)=7\)
+              \item \(p(p(3))=15\)
+              \item \(p(p(p(3)))=31\)
+              \item \(p(p(p(a)))=8a+7\)
+              \item \(x=-1\)
+          \end{enumerate}
+
+    \item Wurzelfunktion
+          \begin{enumerate}
+              \item \(\sqrt{36}=6\) und \(\sqrt{0}=0\)
+              \item Weil es sonst zu einem Input zwei Outputs geben
+                    kann. Dann ist es keine Funktion mehr.
+              \item \(\mathbb{D}=\mathbb{R}_0^+;
+                    \quad \mathbb{W}=\mathbb{R}_0^+\)
+              \item Domain error.
+              \item Ja, alle \(x\in\,]0,1[\).
+          \end{enumerate}
+
+    \item i) und iv)
+    \item (a) und (c)
+    \item \(g(x) = 3x^2-x\)
+          \begin{enumerate}
+              \item \(g(-2)=10\)
+              \item \(g(0)=0\)
+              \item \(g\left(\frac12\right)=0\)
+              \item \(g\left(\frac76\right)=\frac{14}{9}\)
+              \item \(g(t)=2t^2-t\)
+              \item \(g(t^2)=2t^4-t^2\)
+              \item \(g(\sqrt{x})=2x-\sqrt{x}\)
+              \item \(g(x+2)=2x^2+7x+6\)
+          \end{enumerate}
+
+
+    \item \textbf{Challenge}
+          \begin{enumerate}
+              \item \(6^4=1296\)
+              \item \(5^4=625\)
+          \end{enumerate}
+
+    \item \textbf{Challenge}
+          \[
+              \tau(n)=(a_1+1)\cdot(a_2+1)\cdot
+              \ldots\cdot(a_k+1)
+          \]
+\end{enumerate}
