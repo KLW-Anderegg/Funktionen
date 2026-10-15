@@ -388,7 +388,7 @@ Koordinatensystem definiert.
             \node[left,font=\scriptsize]
             at (0,\y) {\(\y\)};
 
-            % Gerade g durch A(1|2) und B(4|3)
+            % Gerade g durch A(1, 2) und B(4, 3)
             \begin{scope}
                 \clip (-0.6,-0.5) rectangle (8.8,4.1);
                 \draw[black!70,very thick]
@@ -619,8 +619,8 @@ Koordinatensystem definiert.
 \begin{LA}
     {Einführungsaufgabe}{}
     \begin{enumerate}
-        \item Liegen die Punkte \(A=(1|2)\), \(B=(8|4)\) und
-              \(C=(18|7)\) auf einer Geraden?
+        \item Liegen die Punkte \(A=(1, 2)\), \(B=(8, 4)\) und
+              \(C=(18, 7)\) auf einer Geraden?
               Tipp: Betrachten Sie die Steigung.
 
         \item Gegeben ist die Funktion \(f(x)=2x+6\).
@@ -635,7 +635,7 @@ Koordinatensystem definiert.
 
                   \item \textbf{Challenge:}
                         Betrachten Sie nun zwei allgemeine Punkte
-                        \(A=(x_A|y_A)\) und \(B=(x_B|y_B)\)
+                        \(A=(x_A, y_A)\) und \(B=(x_B, y_B)\)
                         auf dem Graphen von \(f\).
 
                         \begin{enumerate}
@@ -699,7 +699,7 @@ Koordinatensystem definiert.
     \]
 
     Nun wird gezeigt, dass der Graph von \(f\) eine Gerade ist:
-    Seien \(A=(x_A|y_A)\) und \(B=(x_B|y_B)\) zwei
+    Seien \(A=(x_A, y_A)\) und \(B=(x_B, y_B)\) zwei
     \emph{beliebige} Punkte auf dem Graphen von \(f\)
     mit \(x_A\neq x_B\).
     Das heisst: \(y_A=f(x_A)\) und \(y_B=f(x_B)\).
@@ -750,7 +750,7 @@ Koordinatensystem definiert.
 
 \begin{bsp}
     {Gleichung \(\longleftarrow\) Graph}{}
-    \textbf{Gegeben} sind \(P=(0|1)\) und \(Q=(2|4)\)
+    \textbf{Gegeben} sind \(P=(0, 1)\) und \(Q=(2, 4)\)
     auf dem Graphen der linearen Funktion \(g\).
 
     \textbf{Gesucht} ist die Funktionsgleichung.
@@ -917,9 +917,9 @@ Koordinatensystem definiert.
         \item Die Punkte \(A\) und \(B\) liegen auf einer Geraden.
               Geben Sie deren Funktionsgleichung an.
               \begin{enumerate}
-                  \item \(A=(0|0),\quad B=(1|-2)\)
-                  \item \(A=(-7|3),\quad B=(11|3)\)
-                  \item \(A=(-2|5),\quad B=(3|20)\)
+                  \item \(A=(0, 0),\quad B=(1, -2)\)
+                  \item \(A=(-7, 3),\quad B=(11, 3)\)
+                  \item \(A=(-2, 5),\quad B=(3, 20)\)
               \end{enumerate}
 
         \item Von der Funktion \(f(x)=ax+b\) mit \(a=\frac{2}{3}\)
@@ -941,7 +941,7 @@ Koordinatensystem definiert.
 
               \begin{enumerate}
                   \item Welche Funktion hat als Graph eine Gerade durch
-                        den Ursprung \((0|0)\)?
+                        den Ursprung \((0, 0)\)?
 
                   \item Welche Funktion hat als Graph eine Gerade mit
                         einer Steigung grösser als 2?
@@ -1051,7 +1051,7 @@ Koordinatensystem definiert.
               \item Ja, da die Steigungen verschieden sind.
                     % Der Schnittpunkt ist
                     % \[
-                    %     S=\left(\frac29\middle|-\frac19\right).
+                    %     S=\left(\frac29\middle, -\frac19\right).
                     % \]
           \end{enumerate}
 
@@ -1148,17 +1148,17 @@ beruht darauf, dass er Bewegung als eine Funktion betrachtet hat.
 
             % Punktbeschriftungen
             \node[red!70!black, above left] at (3,2)
-            {\((3|2)\)};
+            {\((3, 2)\)};
 
             \node[red!70!black, above left] at (8,5)
-            {\((8|5)\)};
+            {\((8, 5)\)};
 
         \end{tikzpicture}
     \end{center}
 
     \begin{enumerate}
         \item Welche Bedeutung haben die Graphenpunkte
-              \((3|2)\) und \((8|5)\)?
+              \((3, 2)\) und \((8, 5)\)?
 
         \item Bestimmen Sie die Geschwindigkeit der Person.
     \end{enumerate}
@@ -1449,10 +1449,10 @@ der Arithmetik bearbeiten!
 \medskip
 
 \textbf{Punkte:} Jeder Punkt im Koordinatensystem entspricht
-einem Zahlenpaar \((x|y)\) und umgekehrt.
+einem Zahlenpaar \((x, y)\) und umgekehrt.
 
 Beispiel: Der Punkt \(A\) in der Skizze entspricht dem
-Zahlenpaar \((-2|1)\).
+Zahlenpaar \((-2, 1)\).
 
 \begin{center}
     \begin{tikzpicture}[scale=0.65,>=stealth]
@@ -1497,14 +1497,14 @@ Die Gerade mit der Gleichung
     g:\quad y=-\frac12 x+2
 \]
 entspricht der Menge aller Punkte \(P\) mit den Koordinaten
-\((x_P|y_P)\), wobei
+\((x_P, y_P)\), wobei
 \[
     y_P=-\frac12 x_P+2.
 \]
 
 \[
     g=\left\{
-    (x_P|y_P)\;\middle|\;
+    (x_P, y_P)\;\middle|\;
     x_P\in\mathbb{R},\
     y_P=-\frac12 x_P+2
     \right\}.
@@ -1587,7 +1587,7 @@ mit algebraischen Methoden lösen.
 \textbf{Streckenlängen:} Sind zwei Punkte durch ihre Koordinaten gegeben, kann man die Länge
 der Verbindungsstrecke mit Pythagoras berechnen.
 
-Für \(A=(-2|1)\) und \(B=(3|-2)\) gilt:
+Für \(A=(-2, 1)\) und \(B=(3, -2)\) gilt:
 \[
     \overline{AB}
     =\sqrt{(\Delta x)^2+(\Delta y)^2}
@@ -1671,7 +1671,7 @@ Für \(A=(-2|1)\) und \(B=(3|-2)\) gilt:
     \end{tikzpicture}
 \end{center}
 
-Die Koordinaten \((x_S|y_S)\) des Schnittpunktes \(S\)
+Die Koordinaten \((x_S, y_S)\) des Schnittpunktes \(S\)
 lassen sich auf algebraische Weise bestimmen.
 
 \(S\) liegt auf der Geraden \(g\). Das ist genau dann der Fall, wenn
@@ -1704,7 +1704,7 @@ indem man die \(x\)-Koordinate in eine der Geradengleichungen einsetzt:
 
 Damit ist
 \[
-    \boxed{S=\left(\frac{14}{15}\,\middle|\,\frac{23}{15}\right)}.
+    \boxed{S=\left(\frac{14}{15}\, , \,\frac{23}{15}\right)}.
 \]
 
 
@@ -2038,9 +2038,9 @@ senkrecht aufeinander.
                   \item senkrecht zu \(g\) ist und durch den Ursprung geht.
 
                   \item senkrecht zu \(g\) verläuft und durch
-                        \(Q=(-5|2)\) geht.
+                        \(Q=(-5, 2)\) geht.
 
-                  \item im Punkt \(P=(-3|g(-3))\) senkrecht zu \(g\) ist.
+                  \item im Punkt \(P=(-3, g(-3))\) senkrecht zu \(g\) ist.
               \end{enumerate}
 
         \item \textbf{Challenge:}
@@ -2056,7 +2056,7 @@ senkrecht aufeinander.
                         \]
 
                   \item Berechnen Sie die Länge der Höhe \(h_a\) des Dreiecks
-                        \(A=(-3|4)\), \(B=(-4|-3)\), \(C=(8|6)\).
+                        \(A=(-3, 4)\), \(B=(-4, -3)\), \(C=(8, 6)\).
               \end{enumerate}
     \end{enumerate}
 
@@ -2077,14 +2077,14 @@ senkrecht aufeinander.
                     \[
                         \frac13 x+1=-\frac35 x+5
                         \quad\Longrightarrow\quad
-                        \boxed{S=\left(\frac{30}{7}\middle|\frac{17}{7}\right)}
+                        \boxed{S=\left(\frac{30}{7} , \frac{17}{7}\right)}
                     \]
 
               \item
                     \[
                         -\frac13 x-1=-\frac34 x+2
                         \quad\Longrightarrow\quad
-                        \boxed{S=\left(\frac{36}{5}\middle|-\frac{17}{5}\right)}
+                        \boxed{S=\left(\frac{36}{5} , -\frac{17}{5}\right)}
                     \]
           \end{enumerate}
 
@@ -2102,9 +2102,9 @@ senkrecht aufeinander.
                     \[
                         \boxed{
                             \begin{aligned}
-                                S_{fg} & =\left(\frac{48}{17}\middle|\frac{19}{17}\right), \\[2mm]
-                                S_{fh} & =\left(\frac{21}{11}\middle|\frac{19}{11}\right), \\[2mm]
-                                S_{gh} & =\left(\frac43\middle|0\right).
+                                S_{fg} & =\left(\frac{48}{17}, \frac{19}{17}\right), \\[2mm]
+                                S_{fh} & =\left(\frac{21}{11}, \frac{19}{11}\right), \\[2mm]
+                                S_{gh} & =\left(\frac43, 0\right).
                             \end{aligned}
                         }
                     \]
@@ -2121,9 +2121,9 @@ senkrecht aufeinander.
                     \[
                         \boxed{
                             \begin{aligned}
-                                S_{fg} & =\left(\frac45\middle|1\right),                   \\[2mm]
-                                S_{fh} & =\left(\frac{16}{13}\middle|-\frac{1}{13}\right), \\[2mm]
-                                S_{gh} & =\left(\frac83\middle|1\right).
+                                S_{fg} & =\left(\frac45, 1\right),                   \\[2mm]
+                                S_{fh} & =\left(\frac{16}{13}, -\frac{1}{13}\right), \\[2mm]
+                                S_{gh} & =\left(\frac83, 1\right).
                             \end{aligned}
                         }
                     \]
@@ -2154,7 +2154,7 @@ senkrecht aufeinander.
                     \[
                         g(-3)=\frac23\cdot(-3)-1=-3
                     \]
-                    Also ist \(P=(-3|-3)\).
+                    Also ist \(P=(-3, -3)\).
                     \[
                         -3=-\frac32\cdot(-3)+b
                         \quad\Longrightarrow\quad b=-\frac{15}{2}
