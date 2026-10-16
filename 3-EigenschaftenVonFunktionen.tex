@@ -566,26 +566,26 @@ unterscheiden. Das stimmt offensichtlich, denn:
 Die beiden Graphenpunkte \((-1, 3)\) und \((1, -3)\) liegen
 demnach punktsymmetrisch zum Ursprung. Damit der ganze Graph
 punktsymmetrisch zum Ursprung verläuft, müssen sich
-\textbf{für jeden beliebigen Input} \(\varepsilon\in\DD\)
-die Funktionswerte an den Stellen \(\varepsilon\) und
-\(-\varepsilon\) nur um das Vorzeichen unterscheiden:
+\textbf{für jeden beliebigen Input} \(u\in\DD\)
+die Funktionswerte an den Stellen \(u\) und
+\(-u\) nur um das Vorzeichen unterscheiden:
 \begin{align*}
-    f(\varepsilon)
-     & = \varepsilon\cdot(\varepsilon-2)\cdot(\varepsilon+2)
-    = \varepsilon^3-4\varepsilon,                                 \\
-    f(-\varepsilon)
-     & = (-\varepsilon)\cdot(-\varepsilon-2)\cdot(-\varepsilon+2)
-    = -\varepsilon^3+4\varepsilon
+    f(u)
+     & = u\cdot(u-2)\cdot(u+2)
+    = u^3-4u,                       \\
+    f(-u)
+     & = (-u)\cdot(-u-2)\cdot(-u+2)
+    = -u^3+4u
 \end{align*}
 
-Also: \(f(-\varepsilon)=-f(\varepsilon)\).
+Also: \(f(-u)=-f(u)\).
 
 \begin{definition}
     {Ungerade Funktion}{}
     Falls für eine Funktion \(f\colon \DD \to \WW\) gilt, dass
     \[
-        f(-\varepsilon)=-f(\varepsilon)
-        \qquad \text{für alle } \varepsilon\in\DD,
+        f(-u)=-f(u)
+        \qquad \text{für alle } u\in\DD,
     \]
     so verläuft der Graph der Funktion punktsymmetrisch zum Ursprung.
 
@@ -596,8 +596,8 @@ Analog gibt es Funktionen deren Graphen achsensymmetrisch zur \(y\)-Achse verlau
     {Gerade Funktion}{}
     Falls für eine Funktion \(f\colon \DD \to \WW\) gilt, dass
     \[
-        f(-\varepsilon)=f(\varepsilon)
-        \qquad \text{für alle } \varepsilon\in\DD,
+        f(-u)=f(u)
+        \qquad \text{für alle } u\in\DD,
     \]
     so verläuft der Graph der Funktion achsensymmetrisch zur \(y\)-Achse.
 
@@ -607,14 +607,14 @@ Analog gibt es Funktionen deren Graphen achsensymmetrisch zur \(y\)-Achse verlau
     {Gerade Funktion}{geradeFunktion}
     Die Funktion \(g(x)=\frac{1}{x^2+1}\) ist gerade, denn
     \[
-        g(\varepsilon)=\frac{1}{\varepsilon^2+1},
+        g(u)=\frac{1}{u^2+1},
         \qquad
-        g(-\varepsilon)=\frac{1}{(-\varepsilon)^2+1}
-        =\frac{1}{\varepsilon^2+1}.
+        g(-u)=\frac{1}{(-u)^2+1}
+        =\frac{1}{u^2+1}.
     \]
 
-    Also gilt für alle \(\varepsilon\in\DD\):
-    \(g(-\varepsilon)=g(\varepsilon)\).
+    Also gilt für alle \(u\in\DD\):
+    \(g(-u)=g(u)\).
 
     \begin{center}
         \begin{tikzpicture}[x=1cm,y=3cm,>=stealth]
@@ -739,21 +739,21 @@ Neben den in diesem Kapitel besprochenen Eigenschaften von Graphen gibt es viele
     \item Nullstellen \(x_1=-3\), \(x_2=3\),
           \(y\)-Achsenabschnitt \(y_0=9\).
           \[
-              g(-\varepsilon)
-              =-(-\varepsilon)^2+9
-              =-\varepsilon^2+9
-              =g(\varepsilon)
+              g(-u)
+              =-(-u)^2+9
+              =-u^2+9
+              =g(u)
               \quad\Rightarrow\quad \text{gerade}.
           \]
 
     \item Nullstellen \(x_1=-1\), \(x_2=0\), \(x_3=1\),
           \(y\)-Achsenabschnitt \(y_0=0\).
           \[
-              h(-\varepsilon)
-              =(-\varepsilon)^3-(-\varepsilon)
-              =-\varepsilon^3+\varepsilon
-              =-(\varepsilon^3-\varepsilon)
-              =-h(\varepsilon)
+              h(-u)
+              =(-u)^3-(-u)
+              =-u^3+u
+              =-(u^3-u)
+              =-h(u)
               \quad\Rightarrow\quad \text{ungerade}.
           \]
 
