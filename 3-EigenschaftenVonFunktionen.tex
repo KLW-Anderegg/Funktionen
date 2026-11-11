@@ -114,29 +114,29 @@ nen über die Funktion selbst liefern. Einige dieser Merkmale von Graphen spiele
 
 \begin{bsp}
     {Nullstellen einer quadratischen Funktion}{IntroNst}
-    Die Nullstellen der Funktion \(h(t)=-5t^2+5t+30\) sind
-    die Lösungen der Gleichung \(h(t)=0\):
+    Die Nullstellen der Funktion \(f(x)=2x^2-4x-6\) sind
+    die Lösungen der Gleichung \(f(x)=0\):
     \[
-        h(t)=0 \iff -5t^2+5t+30=0
+        f(x)=0 \iff 2x^2-4x-6=0
     \]
 
     Da es sich nicht um eine lineare Gleichung handelt
     (wegen dem Quadrat), muss sie auf die Form
     \enquote{Produkt = 0} umgewandelt werden:
     \[
-        -5t^2+5t+30=0
-        \iff -5(t^2-t-6)=0
-        \iff -5(t-3)(t+2)=0
+        2x^2-4x-6=0
+        \iff 2(x^2-2x-3)=0
+        \iff 2(x-3)(x+1)=0
     \]
 
     Die beiden Nullstellen der Funktion können nun
     herausgelesen werden:
     \[
-        t_1=3,\qquad t_2=-2
+        x_1=3,\qquad x_2=-1
     \]
 
     An diesen beiden Stellen schneidet der Graph der Funktion
-    \(h\) die horizontale Achse:
+    \(f\) die horizontale Achse:
 
     \begin{center}
         \begin{tikzpicture}[x=1.5cm,y=0.15cm,>=stealth]
@@ -157,16 +157,16 @@ nen über die Funktion selbst liefern. Einige dieser Merkmale von Graphen spiele
             % Achsen
             \draw[->,thick]
             (-3.8,0) -- (5.35,0)
-            node[above left] {\(t\)};
+            node[above left] {\(x\)};
 
             \draw[->,thick]
             (0,-16) -- (0,38)
-            node[right] {\(h\)};
+            node[right] {\(y\)};
 
             % Beschriftung der t-Achse
             \foreach \x in {-3,-2,-1,1,2,3,4,5}
             \node[below,font=\scriptsize]
-            at (\x,0) {\(\x\mathrm{s}\)};
+            at (\x,0) {\(\x\)};
 
             \node[below left,font=\scriptsize]
             at (0,0) {\(0\)};
@@ -174,15 +174,15 @@ nen über die Funktion selbst liefern. Einige dieser Merkmale von Graphen spiele
             % Beschriftung der h-Achse
             \foreach \y in {-10,10,20,30}
             \node[left,font=\scriptsize]
-            at (0,\y) {\(\y\mathrm{m}\)};
+            at (0,\y) {\(\y\)};
 
             % Funktionsgraph
             \draw[green!50!black,very thick,
-                domain=-2.5:3.5,samples=201,smooth]
-            plot (\x,{-5*\x*\x+5*\x+30});
+                domain=-3:5,samples=201,smooth]
+            plot (\x,{2*\x*\x-4*\x-6});
 
             \node[green!50!black,below left]
-            at (-2.4,-12) {\(h\)};
+            at (-2.4,10) {\(f\)};
 
         \end{tikzpicture}
     \end{center}
@@ -662,6 +662,24 @@ Analog gibt es Funktionen deren Graphen achsensymmetrisch zur \(y\)-Achse verlau
 \end{bsp}
 Neben den in diesem Kapitel besprochenen Eigenschaften von Graphen gibt es viele andere, die zum Teil zu einem späteren Zeitpunkt behandelt werden: Periodizität, Krümmungsverhalten, Wendepunkte, lokale Extrema, asymptotisches Verhalten und viele mehr.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
 \begin{ueb}
     {}{}
 
