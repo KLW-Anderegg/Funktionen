@@ -28,7 +28,7 @@
               \(M(s)\) und \(P(s)\).
 
               \begin{center}
-                  \begin{tikzpicture}[x=0.65cm,y=0.13cm,>=stealth]
+                  \begin{tikzpicture}[x=0.65cm,y=0.09cm,>=stealth]
 
                       % Achsen
                       \draw[->,thick] (-2,0) -- (17,0)
@@ -642,7 +642,7 @@ Koordinatensystem definiert.
                             \item[i)] Erklären Sie, wieso
                                   \(y_A=2x_A+6\) sein muss.
 
-                            \item[ii)] Berechnen Sie die Steigung und formen
+                            \item[ii)] Berechnen Sie die Steigung zwischen den Punkten \(A\) und \(B\) und formen
                                   Sie den Term so lange um, bis Sie eine Zahl erhalten.
                         \end{enumerate}
               \end{enumerate}
@@ -796,124 +796,239 @@ Koordinatensystem definiert.
                   \item \(y=\frac{3}{5}x+\frac{5}{2}\)
                   \item \(y=-\frac{5}{3}x-\frac{2}{5}\)
               \end{enumerate}
+              Vergleichen Sie die Graphen der Aufgaben (c) und (d). Was vermuten Sie? Können Sie Ihre Vermutung begründen?
         \item Geben Sie für jede eingezeichnete Gerade die Funktionsgleichung an.
 
-              \begin{enumerate}
-                  \item
-                        \begin{center}
-                            \begin{tikzpicture}[scale=0.9,>=stealth]
-                                % Raster
-                                \draw[step=0.5,gray!15,very thin]
-                                (-3,-3) grid (3,3);
-                                \draw[step=1,gray!40,thin]
-                                (-3,-3) grid (3,3);
+              %   \begin{enumerate}
+              %       \item 
+              %             \begin{center}
+              %                 \begin{tikzpicture}[scale=0.9,>=stealth]
+              %                     % Raster
+              %                     \draw[step=0.5,gray!15,very thin]
+              %                     (-3,-3) grid (3,3);
+              %                     \draw[step=1,gray!40,thin]
+              %                     (-3,-3) grid (3,3);
 
-                                % Achsen
-                                \draw[->,thick] (-3,0) -- (4,0)
-                                node[right] {\(x\)};
-                                \draw[->,thick] (0,-3) -- (0,4)
-                                node[above] {\(y\)};
+              %                     % Achsen
+              %                     \draw[->,thick] (-3,0) -- (4,0)
+              %                     node[right] {\(x\)};
+              %                     \draw[->,thick] (0,-3) -- (0,4)
+              %                     node[above] {\(y\)};
 
-                                % Achsenbeschriftungen
-                                \foreach \x in {-3,-2,-1,1,2,3}
-                                \node[below,font=\scriptsize] at (\x,0) {\(\x\)};
-                                \foreach \y in {-3,-2,-1,1,2,3}
-                                \node[left,font=\scriptsize] at (0,\y) {\(\y\)};
+              %                     % Achsenbeschriftungen
+              %                     \foreach \x in {-3,-2,-1,1,2,3}
+              %                     \node[below,font=\scriptsize] at (\x,0) {\(\x\)};
+              %                     \foreach \y in {-3,-2,-1,1,2,3}
+              %                     \node[left,font=\scriptsize] at (0,\y) {\(\y\)};
 
-                                % Geraden
-                                \begin{scope}
-                                    \clip (-3,-3) rectangle (3,3);
+              %                     % Geraden
+              %                     \begin{scope}
+              %                         \clip (-3,-3) rectangle (3,3);
 
-                                    % g
-                                    \draw[thick] (-3,2.5) -- (0,-2);
+              %                         % g
+              %                         \draw[thick] (-3,2.5) -- (0,-2);
 
-                                    % h
-                                    \draw[thick] (-1,3) -- (3,-1);
+              %                         % h
+              %                         \draw[thick] (-1,3) -- (3,-1);
 
-                                    % k
-                                    \draw[thick] (-3,-1) -- (1,3);
+              %                         % k
+              %                         \draw[thick] (-3,-1) -- (1,3);
 
-                                    % l
-                                    \draw[thick] (-3,-1) -- (3,-1);
+              %                         % l
+              %                         \draw[thick] (-3,-1) -- (3,-1);
 
-                                    % p
-                                    \draw[thick] (-3,-2.5) -- (3,-1.5);
-                                \end{scope}
+              %                         % p
+              %                         \draw[thick] (-3,-2.5) -- (3,-1.5);
+              %                     \end{scope}
 
-                                % Markierte Punkte
-                                \foreach \x/\y in {
-                                        -3/2.5,0/-2,
-                                        1.5/0.5,2/0,
-                                        -3/-1,-2.5/-0.5,-1/1,1/3,
-                                        1/-1,
-                                        -2.5/-2.4167,2.5/-1.5833
-                                    } {
-                                        \fill (\x,\y) circle (2pt);
-                                    }
+              %                     % Markierte Punkte
+              %                     \foreach \x/\y in {
+              %                             -3/2.5,0/-2,
+              %                             1.5/0.5,2/0,
+              %                             -3/-1,-2.5/-0.5,-1/1,1/3,
+              %                             1/-1,
+              %                             -2.5/-2.4167,2.5/-1.5833
+              %                         } {
+              %                             \fill (\x,\y) circle (2pt);
+              %                         }
 
-                                % Beschriftungen
-                                \node at (-2.7,1.8) {\(g\)};
-                                \node at (-0.85,2.6) {\(h\)};
-                                \node at (0.6,2.6) {\(k\)};
-                                \node at (-1.9,-0.75) {\(\ell\)};
-                                \node at (-1.3,-2.6) {\(p\)};
+              %                     % Beschriftungen
+              %                     \node at (-2.7,1.8) {\(g\)};
+              %                     \node at (-0.85,2.6) {\(h\)};
+              %                     \node at (0.6,2.6) {\(k\)};
+              %                     \node at (-1.9,-0.75) {\(\ell\)};
+              %                     \node at (-1.3,-2.6) {\(p\)};
 
-                            \end{tikzpicture}
-                        \end{center}
+              %                 \end{tikzpicture}
+              %             \end{center}
 
-                  \item
-                        \begin{center}
-                            \begin{tikzpicture}[scale=0.9,>=stealth]
-                                % Raster
-                                \draw[step=0.5,gray!15,very thin]
-                                (-3,-3) grid (3,3);
-                                \draw[step=1,gray!40,thin]
-                                (-3,-3) grid (3,3);
+              %       \item
+              %             \begin{center}
+              %                 \begin{tikzpicture}[scale=0.9,>=stealth]
+              %                     % Raster
+              %                     \draw[step=0.5,gray!15,very thin]
+              %                     (-3,-3) grid (3,3);
+              %                     \draw[step=1,gray!40,thin]
+              %                     (-3,-3) grid (3,3);
 
-                                % Achsen
-                                \draw[->,thick] (-3,0) -- (3.8,0)
-                                node[right] {\(x\)};
-                                \draw[->,thick] (0,-3) -- (0,3.8)
-                                node[above] {\(y\)};
+              %                     % Achsen
+              %                     \draw[->,thick] (-3,0) -- (3.8,0)
+              %                     node[right] {\(x\)};
+              %                     \draw[->,thick] (0,-3) -- (0,3.8)
+              %                     node[above] {\(y\)};
 
-                                % Achsenbeschriftungen
-                                \foreach \x in {-3,-2,-1,1,2,3}
-                                \node[below,font=\scriptsize] at (\x,0) {\(\x\)};
-                                \foreach \y in {-3,-2,-1,1,2,3}
-                                \node[left,font=\scriptsize] at (0,\y) {\(\y\)};
+              %                     % Achsenbeschriftungen
+              %                     \foreach \x in {-3,-2,-1,1,2,3}
+              %                     \node[below,font=\scriptsize] at (\x,0) {\(\x\)};
+              %                     \foreach \y in {-3,-2,-1,1,2,3}
+              %                     \node[left,font=\scriptsize] at (0,\y) {\(\y\)};
 
-                                % Geraden
-                                \begin{scope}
-                                    \clip (-3,-3) rectangle (3,3);
+              %                     % Geraden
+              %                     \begin{scope}
+              %                         \clip (-3,-3) rectangle (3,3);
 
-                                    % f
-                                    \draw[thick] (-2,3) -- (3,-2);
+              %                         % f
+              %                         \draw[thick] (-2,3) -- (3,-2);
 
-                                    % g
-                                    \draw[thick] (-3,-1.5) -- (3,1.5);
+              %                         % g
+              %                         \draw[thick] (-3,-1.5) -- (3,1.5);
 
-                                    % h
-                                    \draw[thick] (-0.5,-3) -- (2.5,3);
-                                \end{scope}
+              %                         % h
+              %                         \draw[thick] (-0.5,-3) -- (2.5,3);
+              %                     \end{scope}
 
-                                % Steigungsdreiecke
-                                \draw[gray!70,thin]
-                                (-2,3) -- (-2,2) -- (-1,2);
+              %                     % Steigungsdreiecke
+              %                     \draw[gray!70,thin]
+              %                     (-2,3) -- (-2,2) -- (-1,2);
 
-                                \draw[gray!70,thin]
-                                (-3,-1.5) -- (-1,-1.5) -- (-1,-0.5);
+              %                     \draw[gray!70,thin]
+              %                     (-3,-1.5) -- (-1,-1.5) -- (-1,-0.5);
 
-                                \draw[gray!70,thin]
-                                (-0.5,-3) -- (0.5,-3) -- (0.5,-1);
+              %                     \draw[gray!70,thin]
+              %                     (-0.5,-3) -- (0.5,-3) -- (0.5,-1);
 
-                                % Beschriftungen
-                                \node at (2.3,-1.8) {\(f\)};
-                                \node at (2.8,1.8) {\(g\)};
-                                \node at (2.1,2.7) {\(h\)};
+              %                     % Beschriftungen
+              %                     \node at (2.3,-1.8) {\(f\)};
+              %                     \node at (2.8,1.8) {\(g\)};
+              %                     \node at (2.1,2.7) {\(h\)};
 
-                            \end{tikzpicture}
-                        \end{center}
-              \end{enumerate}
+              %                 \end{tikzpicture}
+              %             \end{center}
+              %   \end{enumerate}
+              \begin{tasks}(2)
+                  \task
+                  \begin{tikzpicture}[scale=0.8,>=stealth]
+                      % Raster
+                      \draw[step=0.5,gray!15,very thin]
+                      (-3,-3) grid (3,3);
+                      \draw[step=1,gray!40,thin]
+                      (-3,-3) grid (3,3);
+
+                      % Achsen
+                      \draw[->,thick] (-3,0) -- (4,0)
+                      node[right] {\(x\)};
+                      \draw[->,thick] (0,-3) -- (0,4)
+                      node[above] {\(y\)};
+
+                      % Achsenbeschriftungen
+                      \foreach \x in {-3,-2,-1,1,2,3}
+                      \node[below,font=\scriptsize] at (\x,0) {\(\x\)};
+                      \foreach \y in {-3,-2,-1,1,2,3}
+                      \node[left,font=\scriptsize] at (0,\y) {\(\y\)};
+
+                      % Geraden
+                      \begin{scope}
+                          \clip (-3,-3) rectangle (3,3);
+
+                          % g
+                          \draw[thick] (-3,2.5) -- (0,-2);
+
+                          % h
+                          \draw[thick] (-1,3) -- (3,-1);
+
+                          % k
+                          \draw[thick] (-3,-1) -- (1,3);
+
+                          % l
+                          \draw[thick] (-3,-1) -- (3,-1);
+
+                          % p
+                          \draw[thick] (-3,-3) -- (3,-1);
+                      \end{scope}
+
+                      % Markierte Punkte
+                      \foreach \x/\y in {
+                              0/-2,
+                              2/0,
+                              -3/-1,-1/1,1/3,
+                              1/-1, 3/-1
+                          } {
+                              \fill (\x,\y) circle (2pt);
+                          }
+
+                      % Beschriftungen
+                      \node at (-2.7,1.8) {\(g\)};
+                      \node at (-0.85,2.6) {\(h\)};
+                      \node at (0.6,2.6) {\(k\)};
+                      \node at (-1.9,-0.75) {\(\ell\)};
+                      \node at (-1.3,-2.6) {\(p\)};
+
+                  \end{tikzpicture}
+
+                  \task
+                  \begin{tikzpicture}[scale=0.8,>=stealth]
+
+                      % Raster
+                      \draw[step=0.5,gray!15,very thin]
+                      (-3,-3) grid (3,3);
+                      \draw[step=1,gray!40,thin]
+                      (-3,-3) grid (3,3);
+
+                      % Achsen
+                      \draw[->,thick] (-3,0) -- (3.8,0)
+                      node[right] {\(x\)};
+                      \draw[->,thick] (0,-3) -- (0,3.8)
+                      node[above] {\(y\)};
+
+                      % Achsenbeschriftungen
+                      \foreach \x in {-3,-2,-1,1,2,3}
+                      \node[below,font=\scriptsize] at (\x,0) {\(\x\)};
+                      \foreach \y in {-3,-2,-1,1,2,3}
+                      \node[left,font=\scriptsize] at (0,\y) {\(\y\)};
+
+                      % Geraden
+                      \begin{scope}
+                          \clip (-3,-3) rectangle (3,3);
+
+                          % f
+                          \draw[thick] (-2,3) -- (3,-2);
+
+                          % g
+                          \draw[thick] (-3,-1.5) -- (3,1.5);
+
+                          % h
+                          \draw[thick] (-0.5,-3) -- (2.5,3);
+                      \end{scope}
+
+                      % Steigungsdreiecke
+                      %   \draw[gray!70,thin]
+                      %   (-2,3) -- (-2,2) -- (-1,2);
+
+                      %   \draw[gray!70,thin]
+                      %   (-3,-1.5) -- (-1,-1.5) -- (-1,-0.5);
+
+                      %   \draw[gray!70,thin]
+                      %   (-0.5,-3) -- (0.5,-3) -- (0.5,-1);
+
+                      % Beschriftungen
+                      \node at (2.3,-1.8) {\(f\)};
+                      \node at (2.8,1.8) {\(g\)};
+                      \node at (2.1,2.7) {\(h\)};
+
+
+
+                  \end{tikzpicture}
+              \end{tasks}
         \item Die Punkte \(A\) und \(B\) liegen auf einer Geraden.
               Geben Sie deren Funktionsgleichung an.
               \begin{enumerate}
@@ -991,7 +1106,7 @@ Koordinatensystem definiert.
                             h(x)    & =-x+2        \\
                             k(x)    & =x+2         \\
                             \ell(x) & =-1          \\
-                            p(x)    & =\frac16x-2
+                            p(x)    & =\frac13x-2
                         \end{aligned}
                     \]
 
@@ -1858,118 +1973,118 @@ senkrecht aufeinander.
         \item Bestimmen Sie rechnerisch die Koordinaten
               der drei Schnittpunkte der skizzierten Geraden.
 
-              \begin{enumerate}
-                  \item
-                        \begin{center}
-                            \begin{tikzpicture}[scale=0.85,>=stealth]
-                                % Raster
-                                \draw[step=0.5,gray!20,very thin]
-                                (-2,-3) grid (4,4);
-                                \draw[step=1,gray!40,thin]
-                                (-2,-3) grid (4,4);
+              \begin{tasks}(2)
+                  \task
 
-                                % Achsen
-                                \draw[->,thick] (-2,0) -- (4.9,0)
-                                node[right] {\(x\)};
-                                \draw[->,thick] (0,-3) -- (0,4.9)
-                                node[above] {\(y\)};
+                  \begin{tikzpicture}[scale=0.8,>=stealth]
+                      % Raster
+                      \draw[step=0.5,gray!20,very thin]
+                      (-2,-3) grid (4,4);
+                      \draw[step=1,gray!40,thin]
+                      (-2,-3) grid (4,4);
 
-                                % Achsenbeschriftungen
-                                \foreach \x in {-2,-1,1,2,3,4}
-                                \node[below,font=\scriptsize]
-                                at (\x,0) {\(\x\)};
-                                \foreach \y in {-3,-2,-1,1,2,3,4}
-                                \node[left,font=\scriptsize]
-                                at (0,\y) {\(\y\)};
+                      % Achsen
+                      \draw[->,thick] (-2,0) -- (4.9,0)
+                      node[right] {\(x\)};
+                      \draw[->,thick] (0,-3) -- (0,4.9)
+                      node[above] {\(y\)};
 
-                                % Geraden
-                                \begin{scope}
-                                    \clip (-2,-3) rectangle (4,4);
+                      % Achsenbeschriftungen
+                      \foreach \x in {-2,-1,1,2,3,4}
+                      \node[below,font=\scriptsize]
+                      at (\x,0) {\(\x\)};
+                      \foreach \y in {-3,-2,-1,1,2,3,4}
+                      \node[left,font=\scriptsize]
+                      at (0,\y) {\(\y\)};
 
-                                    % f: y = -2/3 x + 3
-                                    \draw[thick,domain=-2:4]
-                                    plot (\x,{-2/3*\x+3});
+                      % Geraden
+                      \begin{scope}
+                          \clip (-2,-3) rectangle (4,4);
 
-                                    % g: y = 3/4 x - 1
-                                    \draw[thick,domain=-2:4]
-                                    plot (\x,{3/4*\x-1});
+                          % f: y = -2/3 x + 3
+                          \draw[thick,domain=-2:4]
+                          plot (\x,{-2/3*\x+3});
 
-                                    % h: y = 3x - 4
-                                    \draw[thick,domain=-2:4]
-                                    plot (\x,{3*\x-4});
-                                \end{scope}
+                          % g: y = 3/4 x - 1
+                          \draw[thick,domain=-2:4]
+                          plot (\x,{3/4*\x-1});
 
-                                % Markierte Punkte
-                                \foreach \x/\y in {
-                                        0/3,1.5/2,
-                                        -2/-2.5,4/2,
-                                        1/-1,1.5/0.5
-                                    } {
-                                        \fill (\x,\y) circle (2pt);
-                                    }
+                          % h: y = 3x - 4
+                          \draw[thick,domain=-2:4]
+                          plot (\x,{3*\x-4});
+                      \end{scope}
 
-                                % Beschriftungen
-                                \node at (-0.8,3.25) {\(f\)};
-                                \node at (-1.3,-1.6) {\(g\)};
-                                \node at (0.7,-2.4) {\(h\)};
-                            \end{tikzpicture}
-                        \end{center}
+                      % Markierte Punkte
+                      \foreach \x/\y in {
+                              0/3,1.5/2,
+                              -2/-2.5,4/2,
+                              1/-1,1.5/0.5
+                          } {
+                              \fill (\x,\y) circle (2pt);
+                          }
 
-                  \item
-                        \begin{center}
-                            \begin{tikzpicture}[scale=0.85,>=stealth]
-                                % Raster
-                                \draw[step=0.5,gray!20,very thin]
-                                (-2,-2) grid (4,3);
-                                \draw[step=1,gray!40,thin]
-                                (-2,-2) grid (4,3);
+                      % Beschriftungen
+                      \node at (-0.8,3.25) {\(f\)};
+                      \node at (-1.3,-1.6) {\(g\)};
+                      \node at (0.7,-2.4) {\(h\)};
+                  \end{tikzpicture}
 
-                                % Achsen
-                                \draw[->,thick] (-2,0) -- (4.9,0)
-                                node[right] {\(x\)};
-                                \draw[->,thick] (0,-2) -- (0,3.9)
-                                node[above] {\(y\)};
 
-                                % Achsenbeschriftungen
-                                \foreach \x in {-2,-1,1,2,3,4}
-                                \node[below,font=\scriptsize]
-                                at (\x,0) {\(\x\)};
-                                \foreach \y in {-2,-1,1,2,3}
-                                \node[left,font=\scriptsize]
-                                at (0,\y) {\(\y\)};
+                  \task
 
-                                % Geraden
-                                \begin{scope}
-                                    \clip (-2,-2) rectangle (4,3);
+                  \begin{tikzpicture}[scale=0.8,>=stealth]
+                      % Raster
+                      \draw[step=0.5,gray!20,very thin]
+                      (-2,-3) grid (4,4);
+                      \draw[step=1,gray!40,thin]
+                      (-2,-3) grid (4,4);
 
-                                    % f: y = -5/2 x + 3
-                                    \draw[thick,domain=-2:4]
-                                    plot (\x,{-5/2*\x+3});
+                      % Achsen
+                      \draw[->,thick] (-2,0) -- (4.9,0)
+                      node[right] {\(x\)};
+                      \draw[->,thick] (0,-3) -- (0,4.9)
+                      node[above] {\(y\)};
 
-                                    % g: y = 1
-                                    \draw[thick] (-2,1) -- (4,1);
+                      % Achsenbeschriftungen
+                      \foreach \x in {-2,-1,1,2,3,4}
+                      \node[below,font=\scriptsize]
+                      at (\x,0) {\(\x\)};
+                      \foreach \y in {-3,-2,-1,1,2,3,4}
+                      \node[left,font=\scriptsize]
+                      at (0,\y) {\(\y\)};
 
-                                    % h: y = 3/4 x - 1
-                                    \draw[thick,domain=-2:4]
-                                    plot (\x,{3/4*\x-1});
-                                \end{scope}
+                      % Geraden
+                      \begin{scope}
+                          \clip (-2,-3) rectangle (4,4);
 
-                                % Markierte Punkte
-                                \foreach \x/\y in {
-                                        0/3,1/0.5,
-                                        -1/1,4/1,
-                                        2/0.5,4/2
-                                    } {
-                                        \fill (\x,\y) circle (2pt);
-                                    }
+                          % f: y = -5/2 x + 3
+                          \draw[thick,domain=-2:4]
+                          plot (\x,{-5/2*\x+3});
 
-                                % Beschriftungen
-                                \node at (0.8,1.8) {\(f\)};
-                                \node at (-1.7,1.25) {\(g\)};
-                                \node at (-0.5,-1.3) {\(h\)};
-                            \end{tikzpicture}
-                        \end{center}
-              \end{enumerate}
+                          % g: y = 1
+                          \draw[thick] (-2,1) -- (4,1);
+
+                          % h: y = 3/4 x - 1
+                          \draw[thick,domain=-2:4]
+                          plot (\x,{3/4*\x-1});
+                      \end{scope}
+
+                      % Markierte Punkte
+                      \foreach \x/\y in {
+                              0/3,1/0.5,
+                              -1/1,4/1,
+                              2/0.5,4/2
+                          } {
+                              \fill (\x,\y) circle (2pt);
+                          }
+
+                      % Beschriftungen
+                      \node at (0.8,1.8) {\(f\)};
+                      \node at (-1.7,1.25) {\(g\)};
+                      \node at (-0.5,-1.3) {\(h\)};
+                  \end{tikzpicture}
+
+              \end{tasks}
               % \item Gegeben ist die Gerade \(g\) mit der Funktionsgleichung
               %       \[
               %           g:\ y=\frac{3}{8}x-2.
