@@ -90,97 +90,97 @@
     \end{enumerate}
 \end{LA}
 
-\clearpage
-\begin{LA}
-    {Wie steil ist die Gerade?}{}
-    Alice hat die folgende Abbildung einiger Geraden vor sich.
-    Sie ruft gleich Bob an, der die Grafik nicht sieht, und möchte
-    ihm erzählen, wie die Geraden aussehen und insbesondere,
-    wie steil sie sind.
+% \clearpage
+% \begin{LA}
+%     {Wie steil ist die Gerade?}{}
+%     Alice hat die folgende Abbildung einiger Geraden vor sich.
+%     Sie ruft gleich Bob an, der die Grafik nicht sieht, und möchte
+%     ihm erzählen, wie die Geraden aussehen und insbesondere,
+%     wie steil sie sind.
 
-    \begin{center}
-        \begin{tikzpicture}[x=0.75cm,y=0.75cm]
+%     \begin{center}
+%         \begin{tikzpicture}[x=0.75cm,y=0.75cm]
 
-            % Raster
-            \draw[step=1,gray!65,dash dot]
-            (0,0) grid (14,9);
+%             % Raster
+%             \draw[step=1,gray!65,dash dot]
+%             (0,0) grid (14,9);
 
-            % Geraden
-            \begin{scope}
-                \clip (0,0) rectangle (14,9);
+%             % Geraden
+%             \begin{scope}
+%                 \clip (0,0) rectangle (14,9);
 
-                % Gerade a: Steigung 1/5
-                \draw[black,thick]
-                (2,1) -- (12,3);
+%                 % Gerade a: Steigung 1/5
+%                 \draw[black,thick]
+%                 (2,1) -- (12,3);
 
-                % Gerade b: Steigung 7/10
-                \draw[black,thick]
-                (2,1) -- (12,8);
+%                 % Gerade b: Steigung 7/10
+%                 \draw[black,thick]
+%                 (2,1) -- (12,8);
 
-                % Gerade c: Steigung 7/3
-                \draw[black,thick]
-                (2,1) -- (5.5,9.1667);
+%                 % Gerade c: Steigung 7/3
+%                 \draw[black,thick]
+%                 (2,1) -- (5.5,9.1667);
 
-                % Gerade d: Steigung -3/4
-                \draw[black,thick]
-                (2,7) -- (10,1);
-            \end{scope}
+%                 % Gerade d: Steigung -3/4
+%                 \draw[black,thick]
+%                 (2,7) -- (10,1);
+%             \end{scope}
 
-            % Markierte Punkte
-            \foreach \x/\y in {
-                    2/1,
-                    12/3,
-                    12/8,
-                    5/8,
-                    2/7,
-                    10/1
-                } {
-                    \filldraw[fill=gray!60,draw=black]
-                    (\x,\y) circle (2.8pt);
-                }
+%             % Markierte Punkte
+%             \foreach \x/\y in {
+%                     2/1,
+%                     12/3,
+%                     12/8,
+%                     5/8,
+%                     2/7,
+%                     10/1
+%                 } {
+%                     \filldraw[fill=gray!60,draw=black]
+%                     (\x,\y) circle (2.8pt);
+%                 }
 
-            % Beschriftungen
-            \node[above] at (4.5,0.65) {\(a\)};
-            \node[below] at (9.7,6.45) {\(b\)};
-            \node[right] at (5.2,8.6) {\(c\)};
-            \node[right] at (2.4,6.) {\(d\)};
+%             % Beschriftungen
+%             \node[above] at (4.5,0.65) {\(a\)};
+%             \node[below] at (9.7,6.45) {\(b\)};
+%             \node[right] at (5.2,8.6) {\(c\)};
+%             \node[right] at (2.4,6.) {\(d\)};
 
-        \end{tikzpicture}
-    \end{center}
+%         \end{tikzpicture}
+%     \end{center}
 
-    \begin{center}
-        \fbox{%
-            \parbox{0.9\textwidth}{%
-                \centering
-                \Large Erfinden Sie eine Masszahl für
-                \enquote{Steilheit}!
-            }%
-        }
-    \end{center}
+%     \begin{center}
+%         \fbox{%
+%             \parbox{0.9\textwidth}{%
+%                 \centering
+%                 \Large Erfinden Sie eine Masszahl für
+%                 \enquote{Steilheit}!
+%             }%
+%         }
+%     \end{center}
 
-    Können Sie Alice bei diesem Unterfangen helfen?
-    Genauer: Können Sie die Steilheit einer Geraden durch eine
-    einzige Zahl ausdrücken, die Alice dann am Telefon nennen kann?
+%     Können Sie Alice bei diesem Unterfangen helfen?
+%     Genauer: Können Sie die Steilheit einer Geraden durch eine
+%     einzige Zahl ausdrücken, die Alice dann am Telefon nennen kann?
 
-    Die Masszahl für Steilheit soll folgenden Regeln genügen:
+%     Die Masszahl für Steilheit soll folgenden Regeln genügen:
 
-    \begin{enumerate}
-        \item Die Zahl soll für jede mögliche Gerade nach derselben
-              Regel zustande kommen.
+%     \begin{enumerate}
+%         \item Die Zahl soll für jede mögliche Gerade nach derselben
+%               Regel zustande kommen.
 
-        \item Je grösser die Zahl ist, desto steiler ist die Gerade.
-              (Die Grösse der Zahl gibt Bob also eine präzise Vorstellung
-              davon, wie steil die Gerade ist.)
+%         \item Je grösser die Zahl ist, desto steiler ist die Gerade.
+%               (Die Grösse der Zahl gibt Bob also eine präzise Vorstellung
+%               davon, wie steil die Gerade ist.)
 
-        \item Positive Zahlen stehen für Geraden, die streng monoton
-              wachsen (wie a, b, c), und negative Zahlen stehen für Geraden,
-              die streng monoton fallen (wie d).
+%         \item Positive Zahlen stehen für Geraden, die streng monoton
+%               wachsen (wie a, b, c), und negative Zahlen stehen für Geraden,
+%               die streng monoton fallen (wie d).
 
-        \item Es muss für Alice möglich sein, die Masszahlen für
-              die Geraden a--d allein aus der abgebildeten Grafik
-              ohne weitere Hilfsmittel präzise zu bestimmen.
-    \end{enumerate}
-\end{LA}
+%         \item Es muss für Alice möglich sein, die Masszahlen für
+%               die Geraden a--d allein aus der abgebildeten Grafik
+%               ohne weitere Hilfsmittel präzise zu bestimmen.
+%     \end{enumerate}
+% \end{LA}
 
 
 
